@@ -3,8 +3,9 @@ require("dotenv").config();
 const app = express();
 app.use(express.json());
 
-const db = require("./config/db");
-const Product = require("./models/userModel");
+const db = require("./config/db.js");
+const Product = require("./models/userModel.js");
+db();
 
 app.get("/", async (req, res) => {
   try {
